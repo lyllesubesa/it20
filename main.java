@@ -1,37 +1,38 @@
-package topic_2_linkedlist_int;
 
 import java.util.Scanner;
-public class Main {
-    
-    public static void main(String[] args) {
 
-          LinkedListBylylle list = new LinkedListlylle();
+public class main {
+
+
+	public static void main(String[] args) {
+		
+		linkedlist list = new linkedlist();
+                Scanner scan = new Scanner(System.in);
+                
+                 while(true){
+                
+                System.out.println("Welcome to String Linked List");
+                System.out.println("What do you want to do in the list?");
+                System.out.println("1. Add ");
+                System.out.println("2. Delete ");
+                System.out.println("3. Move / Swap ");
+                System.out.println("4. Display ");
+                
+                
+                
+                 String answer = scan.nextLine();
           
-          Scanner scan = new Scanner(System.in);
-          
-          
-          System.out.println("Welcome to the linked List =)");
-          
-          
-          while(true){
-          
-          System.out.println("What do you want to do in the list ? ");
-          System.out.println("1. Add");
-          System.out.println("2. Delete");
-          System.out.println("3. Move/Swap");
-          System.out.println("4. Display");
-          System.out.println("5. Exit ");
-          
-          String answer = scan.nextLine();
-          
-          
+         
           
           //  Adding elements to the list
           if(answer.equals("1")){
               for(int i = 0; i <= 0; i++){
                System.out.println("What elements would you like to add?");
-              int eltoadd = Integer.parseInt(scan.nextLine());
+              String eltoadd = scan.nextLine();
               list.add(eltoadd);
+              System.out.println("Current Linked List:");
+              System.out.println("------------------------------");
+              list.printList();
               
               
               }
@@ -40,10 +41,11 @@ public class Main {
               String ans = scan.nextLine();
              
               if(ans.equals("Yes")){
-                  System.out.println("");
-                  int eltoadd = Integer.parseInt(scan.nextLine());
+                  System.out.print("Enter the element that you want to add");
+                  String eltoadd = scan.nextLine();
               list.add(eltoadd);
               }else{
+                  list.printList();
                   break;
               }
               }
@@ -51,7 +53,7 @@ public class Main {
           } else if(answer.equals("2")){
               
               System.out.println("What element would you like to delete?");
-               int eltodele = Integer.parseInt(scan.nextLine());
+               String eltodele = scan.nextLine();
                list.deleteByValue(eltodele);
               
               
@@ -70,7 +72,7 @@ public class Main {
              list.printList();
              
           }else if(answer.equals("5")){
-              g
+              
               System.out.println("Thank you");
               break;
                
@@ -79,11 +81,10 @@ public class Main {
           }else{
               System.out.println("heheheheh");
               
-          }
+  
+	}
 
-
-
-    }
-    
 }
+
+        }
 }

@@ -1,16 +1,15 @@
 
 
 
-package topic_2_linkedlist_int;
 
-
-public class Node {
-    int data;  
-    Node next;  
+public class node {
+	String data;  
+    node next;    
 
     // Constructor
-    Node(int data) {
+    node(String data) {
         this.data = data;
         this.next = null;
-}
+    }
+
 }
